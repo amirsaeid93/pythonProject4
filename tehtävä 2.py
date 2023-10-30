@@ -40,11 +40,11 @@ class Talo:
         self.hissit[hissin_numero].siirry_kerrokseen(kohde_kerros)
 
 
-# h = Hissi(0, 5)
-#
-# h.siirry_kerrokseen(4)
-# h.siirry_kerrokseen(1)
-# h.siirry_kerrokseen(5)
+h = Hissi(0, 5)
+
+h.siirry_kerrokseen(4)
+h.siirry_kerrokseen(1)
+h.siirry_kerrokseen(5)
 
 talo = Talo(0, 5, 3)
 talo.aja_hissiä(2, 5)
