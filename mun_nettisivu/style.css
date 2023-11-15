@@ -1,0 +1,30 @@
+body{
+    font-family: 'Times New Roman';
+    color:white;
+    background-color:black;
+}
+
+
+header{
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: black;
+    justify-content: space-between;
+}
+
+
+nav{
+    font-size: 20px;
+    justify-content: space-between;
+    display:table-row;
+    flex-direction: row-reverse;
+}
+
+
+
+
+
+header>h1{
+    font-size: 40px ;
+    margin-top: auto;
+}

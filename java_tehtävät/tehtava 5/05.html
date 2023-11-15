@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tehtävä 5</title>
+</head>
+<div class="result"></div>
+<body>
+<script>
+    'use script'
+
+    const year = parseInt(prompt('enter the year'));
+    let result = document.querySelector('.result');
+    console.log(result);
+
+
+    if ((year % 4 == 0) (year % 100 != 0) || (year % 400 == 0)) {
+        result.innerHTML = `year ${year} is leapyear`;
+    } else {
+        result.innerHTML = `year ${year} is not a leapyear`;
+    }
+
+
+
+</script>
+
+</body>
+</html>

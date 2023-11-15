@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Square Root Calculator</title>
+</head>
+
+<body>
+
+<div class="result"></div>
+
+
+<script>
+  // Function to calculate square root
+  function calculateSquareRoot() {
+    // Display confirmation window
+    const vastaus = confirm("Should I calculate the square root?");
+    let result = document.querySelector('.result')
+    // Check user's choice
+    if (vastaus) {
+      // Ask for the number
+      var number = parseInt(prompt("Enter a number:"));
+
+      // Check if the entered value is a valid number
+      if (number !== null && !isNaN(number)) {
+        // Parse the number
+        number = parseFloat(number);
+
+        // Check if the number is non-negative
+        if (number >= 0) {
+          // Calculate and print square root
+          var squareRoot = Math.sqrt(number);
+          document.write("The square root of " + number + " is: " + squareRoot);
+        } else {
+          // Print message for negative number
+          document.write("The square root of a negative number is not defined.");
+        }
+      } else {
+        // Print message for invalid input
+        document.write("Invalid input. The square root is not calculated.");
+      }
+    } else {
+      // Print message if user cancels
+      document.write("The square root is not calculated.");
+    }
+  }
+
+  // Call the function
+  calculateSquareRoot();
+</script>
+
+</body>
+</html>

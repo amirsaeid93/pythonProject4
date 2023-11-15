@@ -47,6 +47,7 @@ h.siirry_kerrokseen(1)
 h.siirry_kerrokseen(5)
 
 talo = Talo(0, 5, 3)
-talo.aja_hissiä(2, 5)
-
+talo.aja_hissiä(0, 3)
+talo.aja_hissiä(1, 5)
+talo.aja_hissiä(2, 2)
 
