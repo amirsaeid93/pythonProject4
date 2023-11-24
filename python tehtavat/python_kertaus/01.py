@@ -5,7 +5,7 @@ class Animal:
         self.sound = sound
 
     def make_sound(self):
-        print(f'{self.type} {self.sound}')
+        print(f'{self.type}, {self.sound}')
 
  class Bird(Animal):
 
@@ -29,7 +29,7 @@ class Zoo:
         self.animals.append(Animal)
         return
 
-    def list_animal(self, animals):
+    def list_animal(self, animals)
 
 
 

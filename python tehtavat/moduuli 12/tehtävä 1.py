@@ -1,7 +1,7 @@
 import requests
 
 
-def nappaa_chuck_norris_vitsi():
+def ota_chuck_norris_vitsi():
     url = "https://api.chucknorris.io/jokes/random"
     response = requests.get(url)
 
@@ -13,7 +13,7 @@ def nappaa_chuck_norris_vitsi():
 
 
 def main():
-    vitsi = nappaa_chuck_norris_vitsi()
+    vitsi = ota_chuck_norris_vitsi()
     print("Chuck Norris vitsi:")
     print(vitsi)
 

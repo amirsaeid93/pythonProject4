@@ -1,5 +1,6 @@
 import requests
 
+
 def kelvin_to_celsius(kelvin):
     return kelvin - 273.15
 
@@ -12,8 +13,7 @@ def get_weather(api_key, city):
     }
 
     response = requests.get(base_url, params=params)
-
-    if response.status_code == 200:
+    if  response.status_code == 200:
         weather_data = response.json()
         weather_desc = weather_data['weather'][0]['description']
         temp_celsius = weather_data['main']['temp']
@@ -22,7 +22,7 @@ def get_weather(api_key, city):
         return None, None
 
 def main():
-    api_key = "YOUR_API_KEY"  # Replace with your actual API key from OpenWeather
+    api_key = "moduuli12/api_key.json"
     city = input("Enter the name of a city: ")
 
     weather_desc, temp_celsius = get_weather(api_key, city)
