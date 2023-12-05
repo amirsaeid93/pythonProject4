@@ -4,7 +4,6 @@ import requests
 def ota_chuck_norris_vitsi():
     url = "https://api.chucknorris.io/jokes/random"
     response = requests.get(url)
-
     if response.status_code == 200:
         data = response.json()
         return data.get('value')
