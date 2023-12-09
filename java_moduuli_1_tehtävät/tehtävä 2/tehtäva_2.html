@@ -1,17 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Testing JavaScript</title>
-    <script src="example.js" defer ></script>
+    <title>JavaScript moduuli 1</title>
 </head>
 <body>
-<h1>Greeting page</h1>
-<div id="name"></div>
+    <h1>Moduuli 1,</h1>
+    <h1>tehtävä 2.</h1>
 <script>
-    'use strict';
-    const name = 'Frank';
-    document.querySelector('#target').innerHTML = 'Good morning, ' + name + '!';
+'use strict';
+let userName = (prompt("What is your name?"));
+
+if (userName != null && userName != "") {
+    const heading = document.createElement("h1");
+
+    let greetingText = document.createTextNode("Hello, " + userName + "!");
+
+    heading.appendChild(greetingText);
+
+    document.body.appendChild(heading);
+    }
+else {
+    document.write("<h1>Hello, ananomys!</h1>");
+}
 </script>
+
 </body>
 </html>
