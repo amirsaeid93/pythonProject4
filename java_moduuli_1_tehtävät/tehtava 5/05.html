@@ -2,27 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>tehtävä 5</title>
+    <title>Javascript moduuli 1</title>
 </head>
-<div class="result"></div>
+<h1>JavaScript moduuli 1,</h1>
+<h1>tehtävä 5.</h1>
 <body>
 <script>
-    'use script'
+    'use strict';
 
-    const year = parseInt(prompt('enter the year'));
-    let result = document.querySelector('.result');
-    console.log(result);
+    const year = parseInt(prompt('Please enter a year:'));
 
 
-    if ((year % 4 == 0) (year % 100 != 0) || (year % 400 == 0)) {
-        result.innerHTML = `year ${year} is leapyear`;
-    } else {
-        result.innerHTML = `year ${year} is not a leapyear`;
+    let isLeapYear = false;
+
+    if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+        isLeapYear = true;
     }
 
-
-
+    if (isLeapYear) {
+        document.write(`<h1>${year} is a leap year.</h1>`);
+    } else {
+        document.write(`<h1>${year} is not a leap year.</h1>`);
+    }
 </script>
-
 </body>
 </html>
