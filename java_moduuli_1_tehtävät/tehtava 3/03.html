@@ -1,40 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>JavaScript moduuli 1</title>
-    <script src="03.js" defer ></script>
 </head>
 <body>
 <h1>JavaScript moduuli 1,</h1>
 <h1>tehtävä 3.</h1>
-<h1>Numeropeli</h1>
-<div class="sum"></div>
-<div class="product"></div>
-<div class="average"></div>
 <script>
     'use strict';
-    const sum = document.querySelector('.sum');
-    const product = document.querySelector('.product');
-    const average = document.querySelector('.average');
+    const num1 = parseInt(prompt('Nimeä jokin kokonaisluku:'));
+    const num2 = parseInt(prompt('Nimeä jokin toinen kokonaisluku:'));
+    const num3 = parseInt(prompt('Nimeä kolmas kokonaisluku:'));
 
+    const sum = num1 + num2 + num3;
+    const product = num1 * num2 * num3;
+    const average = sum / 3;
 
-    const num1 = parseInt(prompt('Please name a number:'));
-    console.log(typeof num1);
-    const num2 = parseInt(prompt('Please name a number:'));
-    const num3 = parseInt(prompt('Please name a number:'));
-
-    let totalsum = num1 + num2 + num3;
-    let totalproduct = num1 * num2 * num3;
-    let totalaverage = totalproduct / 3;
-
-
-
-    sum.innerHTML = `sum: ${totalsum}`;
-    product.innerHTML = `product: ${totalproduct}`;
-    average.innerHTML = `average: ${totalaverage}`;
-
-
+    document.write(`<h2>Sum: ${sum}</h2>`);
+    document.write(`<h2>Product: ${product}</h2>`);
+    document.write(`<h2>Average: ${average}</h2>`);
 </script>
 </body>
 </html>
