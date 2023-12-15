@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>javascript moduuli 2</title>
+</head>
+<body>
+<h1>Javascript moduuli 2,</h1>
+<h1>tehtävä 2.</h1>
+<script>
+'use strict'
+let numOsallistujat = parseInt(prompt("Ole hyvä ja syötä osallistujien lukumäärä:"));
+
+let osallistujat = [];
+
+// Prompt for participant names and store them in the array
+for (let i = 0; i < numOsallistujat; i++) {
+let nimi = prompt(`Ole hyvä ja syötä ${i + 1}. osallistujan nimi:`);
+osallistujat.push(nimi);
+}
+
+// Sort the participant names alphabetically
+osallistujat.sort();
+
+// Display the participant names in an ordered list on the webpage
+document.write("<h1>Osallistujien nimilista aakkosjärjestyksessä on:</h1>");
+document.write("<ol>");
+for (let i = 0; i < osallistujat.length; i++) {
+document.write("<li>" + osallistujat[i] + "</li>");
+}
+document.write("</ol>");
+
+
+</script>
+</body>
+</html>
