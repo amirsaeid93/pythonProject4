@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript moduuli 2</title>
+</head>
+<body>
+<h1>Javascript moduuli 2,</h1>
+<h1>tehtävä 3</h1>
+<script>
+    'use strict'
+  let dogs = [];
+
+
+  for (let i = 0; i < 6; i++) {
+    let dogName = prompt(`Ole hyvä ja syötä ${i + 1}. koiralle nimi:`);
+    dogs.push(dogName);
+  }
+
+  dogs.sort(function(a, b) {
+    return b.localeCompare(a);
+  });
+
+  document.write("<h1>Koirien nimet käänteis aakkosjärjestyksessä ovat:</h1>");
+  document.write("<ul>");
+  for (let i = 0; i < dogs.length; i++) {
+    document.write("<li>" + dogs[i] + "</li>");
+  }
+  document.write("</ul>");
+</script>
+
+</body>
+</html>
