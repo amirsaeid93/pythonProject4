@@ -7,7 +7,45 @@
 <body>
 <h1>Javascript moduuli 2,</h1>
 <h1>tehtävä 4.</h1>
+<script>
+'use strict'
+let numbers = [];
 
+function promptNumbers() {
+    while (true) {
+        let input = prompt("Ole hyvä ja syötä jokin luku tai syötä luku 0, jos haluat lopettaa:");
+        let number = parseFloat(input);
 
+        if (isNaN(number)) {
+            alert("Ole hyvä ja syötä jokin kelvollinen luku:");
+            continue;
+        }
+
+        if (number === 0) {
+            break;
+        }
+
+        numbers.push(number);
+    }
+}
+
+function displayNumbers() {
+    numbers.sort(function(a, b) {
+        return b - a;
+    });
+
+    console.log("Luvut suurimmasta pienimpään ovat:");
+    document.write("<h1>Luvut suurimmasta pienimpään ovat:</h1>");
+
+    numbers.forEach(function(number) {
+        console.log(number);
+        document.write(`<h1>${number}</h1>`);
+    });
+}
+
+promptNumbers();
+displayNumbers();
+
+</script>
 </body>
 </html>
