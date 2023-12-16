@@ -8,9 +8,37 @@
 <h1>Javascript moduuli 2,</h1>
 <h1>tehtävä 4.</h1>
 
+<script>
+'use strict'
+  let numbers = [];
 
+  while (true) {
+    let num = parseFloat(prompt("Enter a number (or cancel to stop):"));
 
+    if (num || num === 0) {
+      if (numbers.includes(num)) {
+        alert(`Number ${num} has already been entered. Operation stopped.`);
+        break;
+      } else {
+        numbers.push(num);
+      }
+    } else {
+      break; // Exit loop if cancel or empty input is provided
+    }
+  }
 
+  // Sort the numbers in ascending order
+  numbers.sort(function(a, b) {
+    return a - b;
+  });
 
+  // Display the numbers in ascending order on the webpage
+  document.write("<h2>Given Numbers in Ascending Order:</h2>");
+  document.write("<p>Numbers: " + numbers.join(", ") + "</p>");
+
+  // Print the numbers to the console
+  console.log("Given Numbers in Ascending Order:");
+  console.log(numbers);
+</script>
 </body>
 </html>
