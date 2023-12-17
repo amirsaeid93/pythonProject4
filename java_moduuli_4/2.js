@@ -1,20 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Javascript moduuli 4</title>
-</head>
-<body>
-<h1>Javascript moduuli 4,</h1>
-<h1>Tehtävä 1.</h1>
-<h1>Welcome to tv show information searcher.</h1>
-<h2>Here you can search information about any tv show you want.</h2>
-<h2>You will get the information into your console.</h2>
-<form id="searchForm" action="https://api.tvmaze.com/search/shows">
-<input id="query" name="q" type="text">
-<input type="submit" value="Search">
-</form>
-<script>
 'use strict'
 const form = document.getElementById('searchForm');
 
@@ -39,6 +22,3 @@ console.log('Show URL:', show.url);
 console.log('Sorry, no information was found regarding the inputed TV show.');
 }
 });
-</script>
-</body>
-</html>
