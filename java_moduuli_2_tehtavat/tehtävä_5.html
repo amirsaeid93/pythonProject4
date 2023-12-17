@@ -11,34 +11,33 @@
 <script>
 'use strict'
 let numbers = [];
-
 while (true) {
-let num = parseFloat(prompt("Enter a number (or cancel to stop):"));
+let num = parseFloat(prompt("Ole hyvä ja syötä jokin luku tai valitse peruuta jos haluat lopettaa:"));
 
 if (num || num === 0) {
-  if (numbers.includes(num)) {
-    alert(`Number ${num} has already been entered. Operation stopped.`);
-    break;
-  } else {
-    numbers.push(num);
-  }
+    if (numbers.includes(num)) {
+        alert(`Luku ${num} on jo kerran syötetty. Toiminta päätetty.`);
+        break;
+    } else {
+        numbers.push(num);
+    }
 } else {
-  break; // Exit loop if cancel or empty input is provided
+    break; // Exit loop if cancel or empty input is provided
 }
 }
+function displayNumbers() {
+    numbers.sort(function (a, b) {
+        return a - b;
+    });
+    console.log(`Syötetyt luvut nousevassa järjestyksessä ovat:`)
+    document.write("<h1>Syötetyt luvut nousevassa järjestyksessä ovat:</h1>");
+    numbers.forEach(function (num) {
+        console.log(num)
+        document.write(`<h1>${num}</h1>`);
+    });
+}
+displayNumbers();
 
-// Sort the numbers in ascending order
-numbers.sort(function(a, b) {
-return a - b;
-});
-
-// Display the numbers in ascending order on the webpage
-document.write("<h2>Given Numbers in Ascending Order:</h2>");
-document.write("<p>Numbers: " + numbers.join(", ") + "</p>");
-
-// Print the numbers to the console
-console.log("Given Numbers in Ascending Order:");
-console.log(numbers);
 </script>
 </body>
 </html>
