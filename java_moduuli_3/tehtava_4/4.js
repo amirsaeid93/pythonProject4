@@ -19,7 +19,7 @@ const targetElement = document.getElementById('target');
 
 for (let i = 0; i < students.length; i++) {
   const option = document.createElement('option');
-  option.value = students[i].value;
+  option.id = students[i].id;
   option.textContent = students[i].name;
   targetElement.appendChild(option); // Append each <option> to the select element
 }
