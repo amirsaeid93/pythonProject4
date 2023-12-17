@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript moduuli 2</title>
+</head>
+<body>
+<h1>Javascript moduuli 2,</h1>
+<h1>tehtävä 6.</h1>
+<script>
+'use strict'
+function rollDice() {
+    return Math.floor(Math.random() * 6) + 1;
+}
+
+// Function to roll the dice until the result is 6
+function rollUntilSix() {
+    let resultList = document.createElement('ul');
+    let rolls = [];
+
+    while (true) {
+        let result = rollDice();
+        rolls.push(result);
+
+        // Display result in the console
+        console.log(`Dice Roll results are: ${result}`);
+
+        // Create list item for the result and add to unordered list
+        let listItem = document.createElement('li');
+        listItem.textContent = `Dice Roll: ${result}`;
+        resultList.appendChild(listItem);
+
+        if (result === 6) {
+            break;
+        }
+    }
+    document.body.appendChild(resultList);
+
+    return rolls;
+}
+
+rollUntilSix();
+</script>
+</body>
+</html>
