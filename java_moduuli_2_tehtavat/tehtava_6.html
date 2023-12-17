@@ -23,11 +23,11 @@ function rollUntilSix() {
         rolls.push(result);
 
         // Display result in the console
-        console.log(`Noppa heittojen tulokset ovat: ${result}`);
+        console.log(`Nopan heiton tulos on: ${result}`);
 
         // Create list item for the result and add to unordered list
         let listItem = document.createElement('li');
-        listItem.textContent = `Noppa heittojen tulokset ovat: ${result}`;
+        listItem.textContent = `Nopan heiton tulos on: ${result}`;
         resultList.appendChild(listItem);
 
         if (result === 6) {
